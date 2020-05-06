@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 700px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .header{
+    margin-top: 20px;
+    width: 350px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    .headerTitle{
+      font-size: 2em;
+    }
+}
+}
