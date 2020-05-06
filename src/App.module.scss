@@ -1,25 +1,34 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
+.container {
   width: 700px;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
-  background-color: cadetblue;
   display: flex;
   flex-direction: column;
   align-items: center;
-  .header{
+
+  .header {
     margin-top: 20px;
     width: 350px;
     height: 50px;
     border: 1px solid black;
     display: flex;
     justify-content: center;
-    .headerTitle{
+
+    .headerTitle {
       font-size: 2em;
     }
-}
+  }
+
+  .content{
+    width: 92%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+  }
 }

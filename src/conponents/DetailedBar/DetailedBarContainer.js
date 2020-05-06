@@ -1,15 +1,16 @@
 import React from "react";
-import DetailedBar from "./DetailedBar";
+import {connect} from "react-redux";
+import DetailedItem from "./DetailedItem";
 
 class DetailedBarApi extends React.Component {
 	render() {
-		return <DetailedBar />
+		return <DetailedItem {...this.props.pokemonDetailed}/>
 	}
 }
 
 const mapStateToProps = (state) => {
 	return{
-
+		pokemonDetailed: state.loader.pokemonDetailed
 	}
 }
 
@@ -18,5 +19,5 @@ const mapDispatchToProps = {
 }
 
 
-const DetailedBarContainer = conntect(mapStateToProps, mapDispatchToProps)(DetailedBarApi)
+const DetailedBarContainer = connect(mapStateToProps, mapDispatchToProps)(DetailedBarApi)
 export default DetailedBarContainer
