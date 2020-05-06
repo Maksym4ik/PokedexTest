@@ -5,5 +5,5 @@ To run app you need:
  3) after downloading dependencies, write in console
  ### npm start
  
-For detailed info about pokemon - click on the image of needed pokemon
+For detailed info about pokemon - click on the image of needed pokemon.
 Button "Load More" load 12 new pokemons for view
