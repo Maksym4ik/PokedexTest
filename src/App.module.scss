@@ -1,34 +1,42 @@
+//default cleaner
 * {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+//main container for bgc sizes and children's location
 .container {
-  width: 700px;
-  min-height: 100vh;
+  background: rgb(221,214,243);
+  background: linear-gradient(270deg, rgba(221,214,243,1) 0%, rgba(250,172,168,1) 100%);min-height: 100vh;
   margin: 0 auto;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+//first block, header Logo
   .header {
-    margin-top: 20px;
-    width: 350px;
-    height: 50px;
-    border: 1px solid black;
+    width: 100%;
+    height: 10vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     .headerTitle {
-      font-size: 2em;
+      color: white;
+      font-size: 2.5em;
+      text-transform: uppercase;
+      font-weight: bold;
+
     }
   }
-
+//second block, content and detailed view
   .content{
-    width: 92%;
+    width: 100%;
+    height: 90vh;
     margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1.45fr 1fr;
+    display: flex;
+
   }
 }

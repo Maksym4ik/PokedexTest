@@ -1,52 +1,89 @@
-
-
-//detailed info bar
-.container{
-  position: fixed;
-  top: calc(50% - 200px);
-  left: 55%;
-  width: 220px;
-  height: 400px;
-  border: 1px solid black;
+// container for checking width and height Detailed panel location
+.mainContainer {
+  max-width: 400px;
+  height: 80vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  .img{
-    width: 150px;
-  }
-  .name{
-    font-weight: bold;
-    font-size: 1.3em;
-  }
-  .contentInfo {
-    width: 200px;
-    border: 1px solid black;
+  justify-content: center;
+  //detailed info bar
+  .container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
+    min-width: 350px;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    -moz-box-shadow: inset 5px 0 10px #A5A5A5;
+    -webkit-box-shadow: inset 5px 0 10px #A5A5A5;
+    box-shadow: inset 5px 0 10px #A5A5A5;
+    //close button
+    .close {
+      position: absolute;
+      left: calc(100% - 60px);
+      top: 35px;
+      background-color: #ff7983;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      transform: rotate(0deg);
+      transition: ease all .3s;
 
-    .row:last-child{
-      border: none;
-    }
+      &:hover {
+        background-color: #ff6471;
+        transform: rotate(180deg);
+      }
 
-    .types{
-      padding: 0px 3px;
-      display: flex;
-      justify-content: center;
-      p{
-        margin-right: 3px;
+      p {
+        color: white;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
       }
     }
-
-    span{
-      width: 100px;
-      text-align: center;
+    //image
+    .img {
+      min-width: 200px;
+      min-height: 200px;
     }
-    .row {
-      border-bottom: 1px solid black;
-      display: flex;
+    //name and id
+    .name {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.6em;
     }
+    //div for table
+    .contentInfo {
+      width: 300px;
 
-    .type{
-      width: 100px;
-      border-right: 1px solid black;
+
+      .types {
+        padding: 0px 3px;
+        display: flex;
+        justify-content: center;
+
+        p {
+          margin-right: 3px;
+        }
+      }
+      //right table piece
+      span {
+        width: 150px;
+        text-align: center;
+      }
+
+      .row {
+        height: 20px;
+        border-bottom: 1px solid rgba(250, 118, 131, 0.79);
+        display: flex;
+      }
+      //left table piece
+      .type {
+        font-weight: bold;
+        width: 150px;
+
+      }
     }
   }
 }

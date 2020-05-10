@@ -3,8 +3,16 @@ import s from "./DetailedBar.module.scss"
 
 const DetailedItem = (props) => {
 
+	//onClick - close open detailed info panel
+	const closeDetailed = () => {
+		props.isDetailedListener(false)
+	}
+	// out mapping of types
 	const outTypes = props.types.map(type => <p key={type}>{type}</p>)
+
+	//out detailed info about pokemons
 	return <div className={s.container}>
+		<div className={s.close} onClick={closeDetailed}><p>x</p></div>
 		<img className={s.img} src={props.img} alt={props.name}/>
 		<p className={s.name}>{`${props.name} #${props.id}`}</p>
 		<div className={s.contentInfo}>
@@ -21,4 +29,5 @@ const DetailedItem = (props) => {
 	</div>
 }
 
+//exports for detailedBar
 export default DetailedItem
